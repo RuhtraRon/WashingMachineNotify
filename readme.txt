@@ -37,13 +37,14 @@ To restore to factory settings, press Reset button or power off device
 
 
 Values to change in WashingMachineNotify.ino:
-#define TIME_TO_SLEEP  30 //seconds to sleep between nags (renotify)
-#define AWAKE_TIME 15000 //milliseconds to stay awake after last vibration
-#define NOTIFY_THRESHOLD 20000 //milliseconds awake before sending ifttt notification
+#define TIME_TO_SLEEP  300      /* Snooze time between re-notifies */
+#define AWAKE_TIME 10000 //milliseconds to wait for another vibration before sleep
+#define NOTIFY_THRESHOLD 270000 //milliseconds of vibration before sending notification
+#define TIMEOUT 120 //seconds for capture portal to be active
+#define NOTIFY_DELAY 120 //seconds to wait before sending first notify
 
 Todo: 
-Update enclosure for new dimentions and add lid
-Test on actual machine and confirm timing
+Update to Wemos Lolin32 (not lite)
 
 
 Sources:
